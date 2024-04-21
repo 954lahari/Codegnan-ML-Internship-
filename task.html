@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <!-- Add your CSS stylesheets or links here -->
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Price Prediction</h1>
+        <form action="/predict" method="post">
+            <!-- Input fields for user data -->
+            <label for="departure">Departure Time:</label>
+            <input type="datetime-local" id="departure" name="Dep_Time" required>
+
+            <label for="arrival">Arrival Time:</label>
+            <input type="datetime-local" id="arrival" name="Arrival_Time" required>
+
+            <label for="stops">Number of Stops:</label>
+            <input type="number" id="stops" name="stops" min="0" max="5" required>
+
+            <label for="airline">Select Airline:</label>
+            <select id="airline" name="airline">
+                <option value="Jet Airways">Jet Airways</option>
+                <option value="IndiGo">IndiGo</option>
+                <!-- Add other airline options here -->
+            </select>
+
+            <!-- Submit button -->
+            <input type="submit" value="Predict Price">
+        </form>
+    </div>
+
+    <!-- Add your JavaScript scripts or links here -->
+    <script src="task.js"></script>
+</body>
+</html>
